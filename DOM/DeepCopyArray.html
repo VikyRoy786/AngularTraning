@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script>
+var arr1=[1,2,3,4,5]
+var arr2 = arr1 ;//here we are not copying the arry we are just using 2 variable for a single object in the heap memory
+arr2[0] = "test"
+var arr3 = [...arr1]; // here we are using spraed to copy the array i.e deep copy and shallow copy
+    alert(arr1);
+    alert(arr2);
+    alert(arr3)  
+
+// /////Copy OF Obj
+    obj = {fname: "vikram", lname:"Roy"}
+    obj1={...obj}
+    obj1.fname="Test"
+    alert(JSON.stringify(obj));   
+    alert(JSON.stringify(obj1));  
+//Copy of ArrayObject
+
+ arr4=[{fname: "vikram", lname:"Roy"},
+     {fname: "Sumedh", lname:"Bhai"},
+     {fname: "Rahul", lname:"Patil"}]
+arr5= arr4.map(n1 => {return {...n1}});
+     arr5[1].fname = "Subhash";
+
+     alert(JSON.stringify(arr4))
+     alert(JSON.stringify(arr5))
+           
+        </script>
+    </head>
+    <body>  
+        <div id ="main"></div>
+    </body>
+</html>

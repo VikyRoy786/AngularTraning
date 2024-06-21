@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+             names ="Vikram";
+            function draw(){
+                main= document.getElementById("main");
+                main.innerHTML =""
+                for(var i = 0; i<name.length;i++){
+
+                }
+             main.innerHTML+= "<h1> Hello "+names+"</h1>" 
+            }
+            function demo(){
+                var nameField = document.getElementById("names");
+                nameField.value=names
+             draw()
+            }
+            function nameChnaged(){
+                var nameField = document.getElementById("names");
+                names= nameField.value;
+                draw()
+            }
+        </script>  
+    </head>
+    <div id="main"></div>
+    <body  onload ="demo()"> 
+        <input type ="text" id ="names" onchange="nameChnaged()"/>
+          
+    </body>
+</html>

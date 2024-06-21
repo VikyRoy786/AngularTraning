@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+
+            function Route(a){
+                switch(a){
+                    case 1 :
+                    main.innerHTML= " <H1> This Is Home Page </H1>";
+                    break;
+                    case 2 :
+                    main.innerHTML= " <H1> This Is Services Page </H1>";
+                    break;
+                    case 3 :
+                    main.innerHTML= " <H1> This Is Contact Page </H1>";
+                    break;
+                    case 4 :
+                    main.innerHTML= " <H1> This Is About Page </H1>";
+                    break;
+                }
+            }
+
+        </script>  
+    </head>
+    <body > 
+        <button onclick ="Route(1)" > Home</button>
+        <button onclick ="Route(2)" > Services</button>
+        <button onclick ="Route(3)" > Contact</button>
+        <button onclick ="Route(4)" > About</button>
+        <div id ="main"></div>
+          
+    </body>
+</html>

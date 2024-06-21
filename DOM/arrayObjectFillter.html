@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+           datas =[{fname : "Vikram", lname:"Roy", role :"Backend"},
+           {fname : "Raj", lname:"Patil", role :"Frontend"},
+           {fname : "Anu", lname:"Dey", role :"HR"} ] 
+          
+           back =  datas.filter((n1)=>n1.role=="Backend")
+           const myJSON1 = JSON.stringify(back);
+           
+           list =  datas.map((n1)=>{
+               n1.role = n1.role.toUpperC
+               ase();
+               return n1;
+           });
+           const myJSON2 = JSON.stringify(list);
+
+        alert(myJSON1);
+        alert(myJSON2)
+        </script>
+    </head>
+    <body>  
+        <div id ="main"></div>
+    </body>
+</html>

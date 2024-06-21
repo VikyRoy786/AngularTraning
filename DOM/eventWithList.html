@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script>
+             names =["Vikram", "Raj", "Ramesh"];
+           
+            function Delete(index){
+                names.splice(index,1);
+                draw();
+
+            }
+             function draw(){
+                main= document.getElementById("main");
+                main.innerHTML ="";
+                for(let i = 0; i<names.length;i++){
+                    main.innerHTML+= "<li>"+names[i]+"      <button onclick='Delete("+i+")'>Delete</button></li>" 
+                }
+                            
+            }
+            
+            function demo(){
+                var nameField = document.getElementById("name");
+                nameField.value="";
+             draw();
+            }
+            function addname(){
+                var nameField = document.getElementById("name");
+                names.push(nameField.value);
+                draw();
+            }
+            function sort(){
+                names.sort();
+                draw();
+            }
+            function revrsesort(){
+                names.reverse(); 
+                draw();
+            }
+           
+        </script>  
+    </head>
+    
+    <body  onload ="demo()"> 
+        <input type ="text" id ="name" >
+        <button onclick="addname()">Add</button>
+        <button onclick="sort()" ondblclick="revrsesort()">Sort</button>
+        <div id="main"><ul></ul></div>    
+    </body>
+</html>

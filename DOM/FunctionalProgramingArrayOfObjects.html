@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+           datas =[{fname : "Vikram", lname:"Roy"},
+           {fname : "Raj", lname:"Patil"},
+           {fname : "Anu", lname:"Dey"} ] 
+           datas.sort((a, b)=>{
+            if(a.fname <b.fname)
+            return -1;
+            else if  (b.fname >a.fname)
+            return 1;
+            else
+            return 0;
+        })
+           const myJSON = JSON.stringify(datas);
+
+        alert(myJSON);
+        </script>
+    </head>
+    <body>  
+        <div id ="main"></div>
+    </body>
+</html>

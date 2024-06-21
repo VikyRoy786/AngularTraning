@@ -1,0 +1,14 @@
+First Name: <input type ="text" [(ngModel)]="addFname"/> <br>
+Last Name: <input type ="text" [(ngModel)]="addLname"/> <br>
+Email : <input type ="text" [(ngModel)]="addEmail"/> <br>
+<button (click)="add()">Add</button> <br>
+<button (click)="sort()">Sort</button> <br>
+<table>
+    <tbody>
+        <tr><th>FName</th><th>LName</th><th>Email</th> <th>Button</th></tr>
+        @for(name of names; track $index){
+            <tr><td>{{name.fname}}</td> <td>{{name.lname}}</td><td>{{name.email}}</td><button class ="btn btn-primary bi bi-trash" (click)="remove($index)" >Remove</button></tr>
+        }
+    </tbody>
+</table>
+
